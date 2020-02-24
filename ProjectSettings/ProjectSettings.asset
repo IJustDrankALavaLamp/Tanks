@@ -642,10 +642,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: f05d9721-7ec1-4533-bcb9-1ccc602138e0
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Lesson
+  organizationId: soullessranga
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

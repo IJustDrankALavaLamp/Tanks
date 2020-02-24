@@ -19,6 +19,8 @@ public class TankAim : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity,m_LayerMask))
         {
             transform.LookAt(hit.point);
+
+            transform.eulerAngles = transform.eulerAngles.y * Vector3.up;
         }
     }
 
