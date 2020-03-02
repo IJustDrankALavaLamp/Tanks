@@ -44,7 +44,7 @@ public class EnemyShooting : MonoBehaviour
     private void Fire()
     {
         Rigidbody shellInstance = Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-
+        
         shellInstance.velocity = m_LauchForce * m_FireTransform.forward;
     }
 
