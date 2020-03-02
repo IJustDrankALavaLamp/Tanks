@@ -17,12 +17,12 @@ public class EnemyTankMovement : MonoBehaviour
 
     private bool m_Follow; //set to true will follow player
 
-
-
+    GameObject[] patrols;
+    Transform PatrolTarget;
     // Start is called before the first frame update
     void Start()
     {
-        
+        patrols = GameObject.FindGameObjectsWithTag("Patrol");
     }
 
     private void Awake()
@@ -65,7 +65,14 @@ public class EnemyTankMovement : MonoBehaviour
     {
         if (m_Follow == false)
         {
-        
+           if (PatrolTarget == null || Vector3.Distance(transform.position, PatrolTarget.position) < 2)
+            {
+                int index = Random.Range(0, patrols.Length);
+                PatrolTarget = patrols[index].transform;
+                m_NavAgent.SetDestination(PatrolTarget.position);
+                m_NavAgent.isStopped = false;
+            }
+            return;
         }
 
         float distance = (m_Player.transform.position - transform.position).magnitude;

@@ -28,6 +28,8 @@ public class Shell : MonoBehaviour
 
         m_ExplosionParticles.transform.parent = null;
 
+        m_ExplosionParticles.Play();
+
         Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
 
         Destroy(gameObject);
