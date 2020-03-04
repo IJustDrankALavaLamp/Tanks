@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 5110841776581707483}
   - component: {fileID: 5110841776581707485}
   - component: {fileID: 4506443827856218498}
+  - component: {fileID: 2385346064884088177}
   m_Layer: 0
   m_Name: EnemyTank
   m_TagString: Untagged
@@ -371,6 +372,21 @@ MonoBehaviour:
   m_FireTransform: {fileID: 5422460891242885253}
   m_LauchForce: 50
   m_ShootDelay: 1
+--- !u!114 &2385346064884088177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5110841775382543946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63eaa7597ad34e8418d1becdb5908564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHealth: 100
+  m_ExplosionPrefab: {fileID: 0}
+  m_CurrentHealth: 0
 --- !u!1 &5110841775382543948
 GameObject:
   m_ObjectHideFlags: 0

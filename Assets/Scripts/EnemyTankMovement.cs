@@ -55,6 +55,7 @@ public class EnemyTankMovement : MonoBehaviour
         if(other.tag == "Player")
         {
             m_Follow = false;
+            Update();
         }
     }
 
