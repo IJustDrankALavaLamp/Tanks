@@ -13,19 +13,35 @@ public class CameraControl : MonoBehaviour
 
     private void Awake()
     {
-        m_target = GameObject.FindGameObjectsWithTag("Player").transform;
+        m_target = GameObject.FindGameObjectWithTag("TankCam").transform; //gets the camera on the tank
     }
 
+    public float rotateSpeed = 10;
 
+    private void Update()
+    {
+
+        Vector3 angles = transform.localEulerAngles + (Vector3.right * Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * rotateSpeed;
+        angles.x = Mathf.Clamp(angles.x, 0, 20);
+
+        transform.localEulerAngles = angles;
+    }
     // Start is called before the first frame update
-    void Start()
+    private void FixedUpdate()
     {
-        
+        Move();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Move()
     {
-        
+        m_DesiredPosition = m_target.position; //sets the target position to the location of the selected thing
+
+        transform.position = Vector3.SmoothDamp(transform.position, m_DesiredPosition, ref m_MoveVelocity, m_DampTime); //sets the speed the camera follows
+
+
+
+
     }
+
+
 }

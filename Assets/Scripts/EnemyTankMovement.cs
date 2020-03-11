@@ -65,14 +65,8 @@ public class EnemyTankMovement : MonoBehaviour
     void Update()
     {
         if (m_Follow == false)
-        {
-           if (PatrolTarget == null || Vector3.Distance(transform.position, PatrolTarget.position) < 2)
-            {
-                int index = Random.Range(0, patrols.Length);
-                PatrolTarget = patrols[index].transform;
-                m_NavAgent.SetDestination(PatrolTarget.position);
-                m_NavAgent.isStopped = false;
-            }
+        { 
+            Patrol();
             return;
         }
 
@@ -85,12 +79,22 @@ public class EnemyTankMovement : MonoBehaviour
         }
         else
         {
-            m_NavAgent.isStopped = true;
+            Patrol();
         }
         if (m_Turret != null)
         {
             m_Turret.LookAt(m_Player.transform);
         }
 
+    }
+    private void Patrol()
+    {
+        if (PatrolTarget == null || Vector3.Distance(transform.position, PatrolTarget.position) < 2)
+        {
+            int index = Random.Range(0, patrols.Length);
+            PatrolTarget = patrols[index].transform;
+            m_NavAgent.SetDestination(PatrolTarget.position);
+            m_NavAgent.isStopped = false;
+        }
     }
 }

@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     {
         m_TimerText.gameObject.SetActive(false);
         m_MessageText.text = "Get Ready";
-        for (int i = 0; 1 < m_Tanks.Length; i++)
+        for (int i = 0; i < m_Tanks.Length; i++)
         {
             m_Tanks[i].SetActive(false);
         }
@@ -85,11 +85,11 @@ public class GameManager : MonoBehaviour
 
                     if(IsPlayerDead() == true)
                     {
-                        m_MessageText.text = "YOU LOSE UWU";
+                        m_MessageText.text = "YOU LOSE";
                     }
                     else
                     {
-                        m_MessageText.text = "You Won OwO!";
+                        m_MessageText.text = "You Won!";
                     }
                 }
                 break;
