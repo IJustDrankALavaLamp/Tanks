@@ -13,15 +13,17 @@ public class TankAim : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity,m_LayerMask))
-        {
-            transform.LookAt(hit.point);
+        //if (Physics.Raycast(ray, out hit, Mathf.Infinity,m_LayerMask))
+        //{
+        //    transform.LookAt(hit.point);
 
-            transform.eulerAngles = transform.eulerAngles.y * Vector3.up;
-        }
+        //    transform.eulerAngles = transform.eulerAngles.y * Vector3.up;
+        //}
+
+        transform.eulerAngles = Vector3.up * Camera.main.transform.eulerAngles.y;
     }
 
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Patrol
   - PatrolRocks
+  - TankCam
   layers:
   - Default
   - TransparentFX

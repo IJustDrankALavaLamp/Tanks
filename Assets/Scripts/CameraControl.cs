@@ -22,7 +22,7 @@ public class CameraControl : MonoBehaviour
     {
 
         Vector3 angles = transform.localEulerAngles + (Vector3.right * Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * rotateSpeed;
-        angles.x = Mathf.Clamp(angles.x, 0, 20);
+        angles.x = Mathf.Clamp(angles.x, 0, 0);
 
         transform.localEulerAngles = angles;
     }
