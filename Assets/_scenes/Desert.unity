@@ -211,70 +211,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 82.135, y: -116.35901, z: -97.759}
---- !u!1 &18471811
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 18471813}
-  - component: {fileID: 18471812}
-  - component: {fileID: 18471814}
-  m_Layer: 0
-  m_Name: Game Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &18471812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18471811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c7aea4e52707864597307b5fb373071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HighScores: {fileID: 18471814}
-  m_MessageText: {fileID: 1000722480}
-  m_TimerText: {fileID: 534251784}
-  m_Tanks:
-  - {fileID: 1724934233}
-  - {fileID: 231559913}
---- !u!4 &18471813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18471811}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &18471814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18471811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c74ece50d318ca6498c83787fe75676f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scores: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  scoreFileName: highscores.txt
 --- !u!1 &65824893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1ebb2b3e672713749a80b46b4ecb9480,
@@ -3335,6 +3271,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3494bfe3ed27861488d9b3f0edb21ec3, type: 3}
+--- !u!1001 &2905953010596194318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2905953010612564874, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_MessageText
+      value: 
+      objectReference: {fileID: 1000722480}
+    - target: {fileID: 2905953010612564874, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_TimerText
+      value: 
+      objectReference: {fileID: 534251784}
+    - target: {fileID: 2905953010612564874, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_Tanks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1724934233}
+    - target: {fileID: 2905953010612564874, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_Tanks.Array.data[1]
+      value: 
+      objectReference: {fileID: 231559913}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564875, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905953010612564877, guid: e0679a5793ddff747bd7f7ded41424f8,
+        type: 3}
+      propertyPath: m_Name
+      value: Game Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0679a5793ddff747bd7f7ded41424f8, type: 3}
 --- !u!1001 &3600656896117984312
 PrefabInstance:
   m_ObjectHideFlags: 0
