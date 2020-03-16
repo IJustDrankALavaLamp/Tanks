@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public HighScores m_HighScores;
+
 
     public Text m_MessageText;
 
@@ -90,6 +92,10 @@ public class GameManager : MonoBehaviour
                     else
                     {
                         m_MessageText.text = "You Won!";
+
+                        //save the score
+                        m_HighScores.AddScore(Mathf.RoundToInt(m_gameTime));
+                        m_HighScores.SaveScoresToFile();
                     }
                 }
                 break;
