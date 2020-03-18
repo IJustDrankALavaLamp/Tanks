@@ -21,7 +21,7 @@ public class CameraControl : MonoBehaviour
     private void Update()
     {
 
-        Vector3 angles = transform.localEulerAngles + (Vector3.right * Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * rotateSpeed;
+        Vector3 angles = transform.localEulerAngles + (Vector3.right * Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * rotateSpeed * Time.deltaTime;
         angles.x = Mathf.Clamp(angles.x, 0, 0);
 
         transform.localEulerAngles = angles;

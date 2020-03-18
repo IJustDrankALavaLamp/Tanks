@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -146,9 +145,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17683228}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 9
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -620,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 708497333109544240, guid: a6fc6967995149f4ba9520645dd77661,
         type: 3}
       propertyPath: m_LauchForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5853178635411954279, guid: a6fc6967995149f4ba9520645dd77661,
         type: 3}
@@ -691,6 +689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Speed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853178636670013359, guid: a6fc6967995149f4ba9520645dd77661,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6fc6967995149f4ba9520645dd77661, type: 3}
@@ -1539,7 +1542,6 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3795,6 +3797,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4506443827856218498, guid: ef7c9b75349a7974ea4aed0e0d13e515,
+        type: 3}
+      propertyPath: m_LauchForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5110841775382110826, guid: ef7c9b75349a7974ea4aed0e0d13e515,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3874,6 +3881,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Acceleration
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110841776581707484, guid: ef7c9b75349a7974ea4aed0e0d13e515,
+        type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110841776581707484, guid: ef7c9b75349a7974ea4aed0e0d13e515,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2385346064884088177, guid: ef7c9b75349a7974ea4aed0e0d13e515, type: 3}
