@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public HighScores m_HighScores;
-
+    
+    public string sceneName;
 
     public Text m_MessageText;
+
+    public Text m_Score;
 
     public Text m_TimerText;
 
@@ -92,7 +96,7 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        m_MessageText.text = "You Won!";
+                        m_MessageText.text = "YOU WIN!";
 
                         //save the score
                         m_HighScores.AddScore(Mathf.RoundToInt(m_gameTime));
@@ -107,20 +111,12 @@ public class GameManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
 
                 //pauses game completely
-                
+
 
 
                 if (Input.GetKeyUp(KeyCode.Return) == true)
                 {
-                    m_gameTime = 0;
-                    m_GameState = GameState.Playing;
-                    m_MessageText.text = "";
-                    m_TimerText.gameObject.SetActive(true);
-
-                    for (int i = 0; i < m_Tanks.Length; i++)
-                    {
-                        m_Tanks[i].SetActive(true);
-                    }
+                    Load();
                 }
                 break;
         }
@@ -139,7 +135,7 @@ public class GameManager : MonoBehaviour
 
                 GameObject.Find("Tank").GetComponent<TankShot>().enabled = false;
                 GameObject.Find("Tank").GetComponentInChildren<TankAim>().enabled = false;
-
+                
             } 
 
             else
@@ -182,6 +178,11 @@ public class GameManager : MonoBehaviour
 
         return false;
     }
+    public void Load()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
 }
+
 
 

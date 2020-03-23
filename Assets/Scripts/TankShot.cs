@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TankShot : MonoBehaviour
 {
@@ -11,21 +12,51 @@ public class TankShot : MonoBehaviour
 
     public float m_LauchForce = 30f;
 
+    public int ammo = 6;
+
+    public Text m_AmmoMess;
+
+    private float reloadTimer;
+
+    public float reloadTime = 10;
+
+    public int maxammo = 6;
+
+
 
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if (Input.GetButtonUp("Fire1"))
+        if ((Input.GetButtonUp("Fire1")) && ammo > 0)
         {
             Fire();
+            ammo--;
         }
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+
+            reloadTimer = reloadTime;
+        }
+        if(reloadTimer > 0)
+        {
+            reloadTimer -= Time.deltaTime;
+
+            if(reloadTimer<=0)
+            {
+                ammo = maxammo;
+            }
+        }
+
+        m_AmmoMess.text = "Ammo: " + ammo.ToString();
     }
     private void Fire()
     {
